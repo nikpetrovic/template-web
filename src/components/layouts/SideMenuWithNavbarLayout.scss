@@ -1,0 +1,46 @@
+.side-menu-with-navbar-layout {
+  $navbarHeight: 60px;
+  $navbarColor: rgba(255, 255, 255, 0.4);
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  .navbar {
+    position: fixed;
+    width: 100%;
+    height: $navbarHeight;
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+
+    background-color: $navbarColor;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .side-menu-left {
+    > :first-child {
+     padding-top: $navbarHeight;
+    }
+
+    &.animated {
+      transition: margin 200ms ease;
+    }
+
+    .ui.inverted.menu.fluid {
+      position: static;
+      overflow-y: auto;
+    }
+  }
+
+  .main-container {
+    padding-top: $navbarHeight;
+    flex: 1;
+
+    .scrollable-content {
+      height: 100%;
+      overflow-y: auto;
+    }
+  }
+}

@@ -1,28 +1,20 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import logo from './logo.svg'
+import './App.scss'
+import SideMenuWithNavbarLayout from './components/layouts/SideMenuWithNavbarLayout'
+import SimpleSideMenu from './components/menu/SimpleSideMenu'
+import Ionicon from './components/common/Ionicon'
+import IconiconAlbums from './generated/IoniconAlbums'
+import IoniconMdWater from './generated/IoniconMdWater'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+      <SideMenuWithNavbarLayout sideMenu={SimpleSideMenu}>
+       <IoniconMdWater />
+      </SideMenuWithNavbarLayout>
+    )
   }
 }
 
-export default App;
+export default App

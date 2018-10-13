@@ -1,0 +1,19 @@
+.side-menu {
+  color: rgb(9, 108, 207);
+  font-weight: 600;
+  // box-shadow: #296EB4 1px solid;
+  height: 100%;
+  
+  .side-menu-item {
+    padding: 1rem 2rem;
+    &::selection {
+      background: none;
+    }
+
+    &:hover {
+      border-radius: 4rem;
+      background-color: rgba(9, 108, 207, 0.1);
+      cursor: pointer;
+    }
+  }
+}
