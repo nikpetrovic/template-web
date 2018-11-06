@@ -1,6 +1,6 @@
 {
   "name": "@nikpetrovic/template-web",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "dependencies": {
     "@babel/core": "7.1.0",
     "@svgr/webpack": "2.4.1",
