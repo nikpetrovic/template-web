@@ -1,6 +1,6 @@
 {
   "name": "@nikpetrovic/template-web",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "dependencies": {
     "@babel/core": "7.1.0",
     "@svgr/webpack": "2.4.1",
@@ -57,7 +57,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+	"publish": "npm version patch & npm publish --access=public"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -112,17 +113,5 @@
   "devDependencies": {
     "mustache": "^3.0.0",
     "node-sass": "^4.9.3"
-  },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nikpetrovic/template-web.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nikpetrovic/template-web/issues"
-  },
-  "homepage": "https://github.com/nikpetrovic/template-web#readme"
+  }
 }
