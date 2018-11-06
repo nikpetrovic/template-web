@@ -112,5 +112,17 @@
   "devDependencies": {
     "mustache": "^3.0.0",
     "node-sass": "^4.9.3"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikpetrovic/template-web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikpetrovic/template-web/issues"
+  },
+  "homepage": "https://github.com/nikpetrovic/template-web#readme"
 }
