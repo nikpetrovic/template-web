@@ -1,0 +1,9 @@
+{{#components}}
+import {{.}} from '{{{outputGeneratedDir}}}/{{.}}'
+{{/components}}
+
+export {
+	{{#components}}
+	{{.}}
+	{{/components}}
+}
