@@ -115,6 +115,6 @@
     "node-sass": "^4.9.3"
   },
   "lib": [
-    "./scr/generated/"
+    "./src/generated/"
   ]
 }

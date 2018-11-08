@@ -1,9 +1,9 @@
 {{#components}}
-import {{.}} from '{{{outputGeneratedDir}}}/{{.}}'
+import {{.}} from './{{.}}'
 {{/components}}
 
 export {
 	{{#components}}
-	{{.}}
+	{{.}},
 	{{/components}}
 }

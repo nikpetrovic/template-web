@@ -67,7 +67,7 @@ readSvgs = (inDir, outDir) => {
 
 generateIndexFile = (components, outDir) => {
   console.log('Generating index.js...')
-  generateFile(TEMPLATE_INDEX, { components, outputGeneratedDir: outDir }, outDir, 'index.js')
+  generateFile(TEMPLATE_INDEX, { components }, outDir, 'index.js')
 }
 
 run = () => {
