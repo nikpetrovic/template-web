@@ -113,5 +113,8 @@
   "devDependencies": {
     "mustache": "^3.0.0",
     "node-sass": "^4.9.3"
-  }
+  },
+  "lib": [
+    "./scr/generated/"
+  ]
 }
