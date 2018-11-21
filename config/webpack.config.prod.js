@@ -18,6 +18,7 @@ const paths = require('./paths');
 const getClientEnvironment = require('./env');
 const getCacheIdentifier = require('react-dev-utils/getCacheIdentifier');
 const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
+const glob = require('glob');
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // It requires a trailing slash, or the file assets will get an incorrect path.
@@ -45,6 +46,13 @@ const cssRegex = /\.css$/;
 const cssModuleRegex = /\.module\.css$/;
 const sassRegex = /\.(scss|sass)$/;
 const sassModuleRegex = /\.module\.(scss|sass)$/;
+
+const svgCompEntries = glob.sync('src/generated/*.js')
+const svgCompEntriesObject = svgCompEntries.reduce((acc, item) => {
+  const name = item.replace('src/generated/', '').replace('.js', '')
+  acc[name] = path.resolve(item)
+  return acc
+}, {})
 
 // common function to get style loaders
 const getStyleLoaders = (cssOptions, preProcessor) => {
@@ -104,7 +112,10 @@ module.exports = {
   // You can exclude the *.map files from the build during deployment.
   devtool: shouldUseSourceMap ? 'source-map' : false,
   // In production, we only want to load the app code.
-  entry: paths.appIndexJs,
+  entry: {
+    index: paths.appIndexJs,
+    // ...svgCompEntriesObject
+  },
   output: {
     // The build folder.
     path: paths.appBuild,
