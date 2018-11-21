@@ -1,6 +1,6 @@
 {
   "name": "@nikpetrovic/template-web",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": {
     "@babel/core": "7.1.0",
     "@svgr/webpack": "2.4.1",
@@ -59,7 +59,7 @@
     "start": "node scripts/start.js",
     "build": "node  --max-old-space-size=4096 scripts/build.js",
     "test": "node scripts/test.js",
-	"publish": "npm version patch & npm publish --access=public"
+    "publish": "npm version patch & npm publish --access=public"
   },
   "eslintConfig": {
     "extends": "react-app"
